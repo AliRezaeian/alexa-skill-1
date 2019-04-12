@@ -51,3 +51,46 @@ You should now have a green checkmark next to the **Invocation Name**, which mea
 
 ![](https://github.com/AliRezaeian/alexa-skill-1/blob/master/images/createskill3.png?raw=true)
 
+## Add Intents, Slots, and Utterances
+An intent represents an action that fulfills a user's spoken request. 
+Intents can optionally have arguments called Slots.
+The utterances specify the words and phrases users can say to invoke your intents. 
+
+1. From the checklist, click the second bullet **Intents, Samples, and Slots**
+2. Enter the name of the new intent **PlanMyTrip** and click **Create custom intent**. This adds a new intent and opens its detail page, displaying the intent's sample utterances and slots.
+3. Click **Create custom intent**
+
+![](https://github.com/AliRezaeian/alexa-skill-1/blob/master/images/createskill4.png?raw=true)
+
+4. In the Intents Slots section, create below slots.
+
+![](https://github.com/AliRezaeian/alexa-skill-1/blob/master/images/createskill5.png?raw=true)
+
+5. Enter some sample utterances like:
+ 
+* _i am going on a trip on friday_
+* _i want to visit portland_
+* _i want to travel from seattle to portland next friday_
+
+Once you have written a few utterances, note the words or phrases that represent variable information. These will become the intent's slots. For example, in the utterances identified above, the variables are highlighted friday, seattle, and portland.
+
+6. In an utterance, highlight the word or phrase representing the slot value.
+7. In the drop-down that appears, select the slot. This will replace the original value in the utterance with the slot name in curly brackets ({ }).
+
+8. Click **Save Model**
+
+9. Click **Build Model**.
+
+![](https://github.com/AliRezaeian/alexa-skill-1/blob/master/images/createskill6.png?raw=true)
+
+For example, if user say: "_Alexa, ask Plan My Trip i want to travel from seattle to portland next friday._"
+
+The Alexa service sends the Plan My Trip service a PlanMyTrip intent with the value "Seattle" in the fromCity slot, "Portland" in the toCity slot and the date for the next upcoming Friday travelDate slot. The service can then save this information and send back text to convert to speech.
+
+Slots are defined with different types. The travelDate slot in the above example uses Amazon's built-in AMAZON.DATE type to convert words that indicate dates (such as "today" and "next friday") into a date format, while both fromCity and toCity use the built-in AMAZON.US_CITY slot.
+
+10. Click **Build** menu, You should now have a green checkmark next to the steps 1, 2, and 3.
+
+![](https://github.com/AliRezaeian/alexa-skill-1/blob/master/images/createskill7.png?raw=true)
+
+
